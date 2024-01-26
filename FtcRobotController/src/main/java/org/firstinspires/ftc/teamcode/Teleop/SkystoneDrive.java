@@ -63,6 +63,6 @@ public class SkystoneDrive extends LinearOpMode {
             telemetry.addData("Servo Status", arm.getPosition());
         }
         telemetry.update();
-    } //stuff
+    }
 }
 
