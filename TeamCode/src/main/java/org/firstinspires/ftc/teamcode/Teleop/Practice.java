@@ -11,7 +11,7 @@ public class Practice extends OpMode {
 
     @Override
     public void init() {
-
+        telemetry.addData("I am", "working");
     }
 
     @Override
