@@ -8,10 +8,11 @@ import com.qualcomm.robotcore.hardware.DcMotor;
 public class Practice extends OpMode {
 
     DcMotor motor;
-
+    DcMotor motor2;
     @Override
     public void init() {
         motor = hardwareMap.get(DcMotor.class, "motor");
+        motor2 = hardwareMap.get(DcMotor.class, "motor2");
         telemetry.addData("I am", "working");
         telemetry.update();
     }
