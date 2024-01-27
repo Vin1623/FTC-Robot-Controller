@@ -8,7 +8,7 @@ import com.qualcomm.robotcore.hardware.DcMotor;
 public class Practice extends OpMode {
 
     DcMotor motor;
-   //Elene
+
     @Override
     public void init() {
         motor = hardwareMap.get(DcMotor.class, "motor");
