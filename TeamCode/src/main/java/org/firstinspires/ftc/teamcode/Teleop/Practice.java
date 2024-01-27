@@ -12,8 +12,9 @@ public class Practice extends OpMode {
     @Override
     public void init() {
         motor = hardwareMap.get(DcMotor.class, "motor");
+        //elene
         telemetry.addData("I am", "working");
-        telemetry.update();
+
     }
 
     @Override
