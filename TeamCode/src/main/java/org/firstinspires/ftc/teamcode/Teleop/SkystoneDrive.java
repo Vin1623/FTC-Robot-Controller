@@ -1,5 +1,4 @@
 package org.firstinspires.ftc.teamcode.Teleop;
-//vincent was here
 
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
@@ -41,19 +40,23 @@ public class SkystoneDrive extends LinearOpMode {
             // DcMotor3 Claw
             if (gamepad1.dpad_up) {
                 ArmHeight.setPower(-0.4);
-            } else {
+            }
+            else {
                 if (gamepad1.dpad_down && ArmHeight.getCurrentPosition() != -1) {
                     ArmHeight.setPower(0.2);
-                } else {
+                }
+                else {
                     ArmHeight.setPower(0);
                 }
             }
             if (gamepad1.left_trigger == 1  && initialPos >= ArmHeight.getCurrentPosition() ) {
                 arm.setPosition(arm.getPosition() + 0.25);
-            } else {
+            }
+            else {
                 if (gamepad1.right_trigger == 1 && arm.getPosition() != -1) {
                     arm.setPosition(arm.getPosition() - 0.25);
-                } else {
+                }
+                else {
                     arm.setPosition(0);
                 }
             }

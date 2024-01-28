@@ -30,6 +30,7 @@
 package org.firstinspires.ftc.teamcode.Teleop;
 
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
+import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.Servo;
 import com.qualcomm.robotcore.util.Range;
@@ -52,7 +53,7 @@ import com.qualcomm.robotcore.util.Range;
  * Also add a new OpMode, select the sample ConceptExternalHardwareClass.java, and select TeleOp.
  *
  */
-
+@TeleOp(name = "Super Duper Cool Stuff", group = "Liner Op Mode")
 public class RobotHardware {
 
     /* Declare OpMode members. */
