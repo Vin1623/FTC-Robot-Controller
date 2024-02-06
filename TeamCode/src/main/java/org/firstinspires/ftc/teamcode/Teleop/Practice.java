@@ -22,6 +22,10 @@ public class Practice extends OpMode {
         if(gamepad1.a){
             motor.setPower(0.5);
         }
+        if(gamepad1.b){
+            motor.setPower(0.5);
+        }
+        motor2.setPower(0);
         motor.setPower(0);
     }
 }
