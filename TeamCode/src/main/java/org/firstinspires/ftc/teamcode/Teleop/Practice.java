@@ -1,5 +1,6 @@
 package org.firstinspires.ftc.teamcode.Teleop;
 
+import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.hardware.DcMotor;
@@ -8,11 +9,11 @@ import com.qualcomm.robotcore.hardware.DcMotor;
 public class Practice extends OpMode {
 
     DcMotor motor;
-    DcMotor motor2;
+//    DcMotor motor2;
     @Override
     public void init() {
         motor = hardwareMap.get(DcMotor.class, "motor");
-        motor2 = hardwareMap.get(DcMotor.class, "motor2");
+//        motor2 = hardwareMap.get(DcMotor.class, "motor2");
         telemetry.addData("I am", "working");
         telemetry.update();
     }
@@ -22,10 +23,10 @@ public class Practice extends OpMode {
         if(gamepad1.a){
             motor.setPower(0.5);
         }
-        if(gamepad1.b){
-            motor.setPower(0.5);
-        }
-        motor2.setPower(0);
+//        if(gamepad1.b){
+//            motor.setPower(0.5);
+//        }
+//        motor2.setPower(0);
         motor.setPower(0);
     }
 }
