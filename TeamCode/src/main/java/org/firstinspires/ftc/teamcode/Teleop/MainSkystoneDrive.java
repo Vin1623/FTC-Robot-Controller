@@ -27,13 +27,13 @@ public class MainSkystoneDrive extends OpMode {
 
     @Override
     public void loop() {
-        double tgtPower = 0;
+//        double tgtPower = 0;
         double motorPowerY = gamepad1.left_stick_y;
         if (gamepad1.right_stick_y > 0 || gamepad1.right_stick_y < 0) {
             motorBL.setPower(motorPowerY);
             motorBR.setPower(motorPowerY);
         }
-        tgtPower = -this.gamepad1.left_stick_y;
+//        tgtPower = -this.gamepad1.left_stick_y;
         if(gamepad1.y) {
             // move to 0 degrees.
             arm.setPosition(0);
@@ -46,7 +46,7 @@ public class MainSkystoneDrive extends OpMode {
             arm.setPosition(1);
         }
         telemetry.addData("Servo Position", arm.getPosition());
-        telemetry.addData("Target Power", tgtPower);
+//        telemetry.addData("Target Power", tgtPower);
         telemetry.addData("Motor Power", motorBL.getPower() + ", " + motorBR.getPower());
         telemetry.addData("Status", "Running");
         telemetry.update();
