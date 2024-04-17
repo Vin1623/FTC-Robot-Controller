@@ -13,6 +13,7 @@ public class MainSkystoneDrive extends OpMode {
     DcMotor motorFR; //Front Right
     DcMotor motorBL; //Back Left
     DcMotor motorBR; //Back Right
+    DcMotor motorM;
     Servo arm; //arm
     Servo arm2; //arm2
     @Override
@@ -21,6 +22,8 @@ public class MainSkystoneDrive extends OpMode {
         motorFR = hardwareMap.get(DcMotor.class, "motorFR");
         motorBL = hardwareMap.get(DcMotor.class, "motorBL");
         motorBR = hardwareMap.get(DcMotor.class, "motorBR");
+        motorM = hardwareMap.get(DcMotor.class, "motorM");
+
 
         telemetry.addData("I am", "working");
         telemetry.update();
@@ -30,10 +33,26 @@ public class MainSkystoneDrive extends OpMode {
     public void loop() {
 //        double tgtPower = 0;
         double motorPowerY = gamepad1.left_stick_y;
+        double motorPowerX = gamepad1.left_stick_x;
+        double motorPowerM = gamepad1.right_stick_y;
         if (gamepad1.left_stick_y > 0 || gamepad1.left_stick_y < 0) {
+            motorFL.setPower(motorPowerY);
+            motorFR.setPower(motorPowerY);
             motorBL.setPower(motorPowerY);
             motorBR.setPower(motorPowerY);
         }
+        if(gamepad1.left_stick_x > 0){
+            motorFL.setPower(motorPowerX);
+            motorBL.setPower(motorPowerX);
+        }
+        if(gamepad1.left_stick_x < 0){
+            motorFR.setPower(motorPowerX);
+            motorBR.setPower(motorPowerX);
+        }
+        if(gamepad1.right_stick_y > 0 || gamepad1.right_stick_y < 0){
+            motorM.setPower(-motorPowerM);
+        }
+
 //        tgtPower = -this.gamepad1.left_stick_y;
         if(gamepad1.y) {
             // move to 0 degrees.
