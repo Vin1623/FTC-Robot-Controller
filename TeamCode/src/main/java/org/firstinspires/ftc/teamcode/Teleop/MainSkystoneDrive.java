@@ -18,13 +18,13 @@ public class MainSkystoneDrive extends OpMode {
     Servo arm2; //arm2
     @Override
     public void init() {
-        motorFL = hardwareMap.get(DcMotor.class, "motorFL");
-        motorFR = hardwareMap.get(DcMotor.class, "motorFR");
-        motorBL = hardwareMap.get(DcMotor.class, "motorBL");
-        motorBR = hardwareMap.get(DcMotor.class, "motorBR");
-        motorM = hardwareMap.get(DcMotor.class, "motorM");
-        arm = (Servo) hardwareMap.get(DcMotor.class, "arm1");
-        arm2 = (Servo) hardwareMap.get(DcMotor.class, "arm2");
+        motorFL = hardwareMap.get(DcMotor.class, "motorFL"); //expansion hub 3 [Port 3]
+        motorFR = hardwareMap.get(DcMotor.class, "motorFR"); //expansion hub 3 [Port 0]
+        motorBL = hardwareMap.get(DcMotor.class, "motorBL"); //expansion hub 3 [Port 1]
+        motorBR = hardwareMap.get(DcMotor.class, "motorBR"); //expansion hub 3 [Port 2]
+        motorM = hardwareMap.get(DcMotor.class, "motorM"); //expansion hub 2 [Port 0]
+        arm = (Servo) hardwareMap.get(DcMotor.class, "arm1"); //expansion hub 2 [Port 0]
+        arm2 = (Servo) hardwareMap.get(DcMotor.class, "arm2"); //expansion hub 2 [Port 1]
 
 
         telemetry.addData("I am", "working");
@@ -82,3 +82,5 @@ public class MainSkystoneDrive extends OpMode {
         motorBR.setPower(0);
     }
 }
+//old phone: driver station
+//new phone: robot controller
