@@ -82,5 +82,5 @@ public class MainSkystoneDrive extends OpMode {
         motorBR.setPower(0);
     }
 }
-//old phone: driver station
-//new phone: robot controller
+//old phone: robot controller (connected to robot)
+//new phone: driver station
