@@ -14,7 +14,7 @@ public class MainSkystoneDrive extends OpMode {
     DcMotor motorBL; //Back Left
     DcMotor motorBR; //Back Right
     DcMotor motorM;
-    Servo arm; //arm
+    Servo arm1; //arm
     Servo arm2; //arm2
     @Override
     public void init() {
@@ -23,6 +23,8 @@ public class MainSkystoneDrive extends OpMode {
         motorBL = hardwareMap.get(DcMotor.class, "motorBL");
         motorBR = hardwareMap.get(DcMotor.class, "motorBR");
         motorM = hardwareMap.get(DcMotor.class, "motorM");
+        arm1 = (Servo) hardwareMap.get(DcMotor.class, "arm1");
+        arm2 = (Servo) hardwareMap.get(DcMotor.class, "arm2");
 
 
         telemetry.addData("I am", "working");
@@ -56,19 +58,19 @@ public class MainSkystoneDrive extends OpMode {
 //        tgtPower = -this.gamepad1.left_stick_y;
         if(gamepad1.y) {
             // move to 0 degrees.
-            arm.setPosition(0);
+            arm1.setPosition(0);
             arm2.setPosition(0);
         }
         else if (gamepad1.x || gamepad1.b) {
             // move to 90 degrees.
-            arm.setPosition(0.5);
+            arm1.setPosition(0.5);
             arm2.setPosition(0.5);
         } else if (gamepad1.a) {
             // move to 180 degrees.
-            arm.setPosition(1);
+            arm1.setPosition(1);
             arm2.setPosition(1);
         }
-        telemetry.addData("Servo Position", arm.getPosition());
+        telemetry.addData("Servo Position", arm1.getPosition());
 //        telemetry.addData("Target Power", tgtPower);
         telemetry.addData("Motor Power", motorBL.getPower() + ", " + motorBR.getPower());
         telemetry.addData("Status", "Running");
