@@ -13,7 +13,7 @@ public class MainSkystoneDrive extends OpMode {
     DcMotor motorFR; //Front Right
     DcMotor motorBL; //Back Left
     DcMotor motorBR; //Back Right
-    DcMotor motorM;
+    DcMotor motorM; //idk
     Servo arm; //arm
     Servo arm2; //arm2
     @Override
